@@ -5,7 +5,7 @@ import About from './Components/About';
 import Product from './Components/Product';
 import ProductItem from './Components/ProductItems';
 import NF from './Components/404'
-import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import Navbar from './Components/Navbar';
 
 function RouteConfig() {

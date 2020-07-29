@@ -1,17 +1,19 @@
 import React from 'react'
 import Shoes from '../shoes.json'
+import {Link} from 'react-router-dom';
+
 function Product(){
     // console.log(Shoes);
     return (
         <div>
             <h1>Products</h1>
-            <div>
+            <div className="productContainer">
                 {Object.keys(Shoes).map(keyName=>{
                     const Shoe=Shoes[keyName];
-                    return (<div key={keyName}>
-                        <h2>{Shoe.name}</h2>
-                        <h3>{Shoe.price}</h3>
-                    </div>)
+                    return (<Link Key={keyName} className="lnk" to={`/product/${keyName}`}>
+                        <h4>{Shoe.name}</h4>
+                        <h5>{Shoe.price}</h5>
+                    </Link>)
                 })}
             </div>
         </div>
