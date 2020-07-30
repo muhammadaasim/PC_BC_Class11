@@ -5,7 +5,7 @@ import About from './Components/About';
 import Product from './Components/Product';
 import ProductItem from './Components/ProductItems';
 import NF from './Components/404'
-import { BrowserRouter as Router, Route } from 'react-router-dom';
+import { BrowserRouter as Router,Switch,Route } from 'react-router-dom';
 import Navbar from './Components/Navbar';
 
 function RouteConfig() {
@@ -13,13 +13,13 @@ function RouteConfig() {
         <div>
             <Router>
                 <Navbar />
-                {/* <Switch> */}
+                <Switch>
                     <Route exact path="/" component={Home} />
                     <Route path="/about" component={About} />
                     <Route exact path="/product" component={Product} />
                     <Route path="/product/:id" component={ProductItem} />
                     <Route path="*" component={NF}/>
-                {/* </Switch> */}
+                </Switch>
             </Router>
         </div>
     )
